@@ -1,0 +1,73 @@
+/*
+ * adc.c
+ *
+ *  Created on: Sep 28 2022
+ *      Author: Billy Begos
+ */
+
+#include <student/adc.h>
+
+/******************************************************************************
+ * Student Defined ADC14 Global Variables
+ *****************************************************************************/
+volatile uint32_t PS2_X_DIR = 0;
+volatile uint32_t PS2_Y_DIR = 0;
+
+/******************************************************************************
+ * ADC14 Initialization Function
+ *
+ * Write a function that will be called to initialize the ADC14 based on the
+ * HW01 Requirements Doc.
+ *****************************************************************************/
+  void ADC14_Initialize(){
+      //change the control to take several single channels of data//
+      //sequence of channel conversion select
+
+      //configure P6.0 (A15) and P4.4 (A13) the X and Y direction as an analog input pin
+      P6->SEL0 |= BIT0;
+      P6->SEL1 |= BIT0;
+
+      P4->SEL0 |= BIT4;
+      P4->SEL1 |= BIT4;
+
+
+      //configure the ADC14 Control Registers
+      //Sample time of the 16 ADC cycles for the first 8 analog channels
+      //Allow the ADC timer to control pulsed samples
+      ADC14->CTL0 = ADC14_CTL0_SHP | ADC14_CTL0_SHT02 | ADC14_CTL0_CONSEQ_1;
+
+      //Use sampling timer, 12-bit conversion results
+      ADC14->CTL1 = ADC14_CTL1_RES_2;
+
+      //Configure Memory Control resister so that we associate the correct
+      //analog channel with MEM[0] and MEM[1]
+      ADC14->MCTL[0] = ADC14_MCTLN_INCH_15;
+      ADC14->MCTL[1] = ADC14_MCTLN_INCH_9 | ADC14_MCTLN_EOS;
+
+      //enable interrupts after the conversion of MEM[0] and MEM[1]completes
+      //ADC14->IER0 = ADC14_IER0_IE0;
+      ADC14->IER0 = ADC14_IER0_IE1;
+
+
+      //enable ADC Interrupt
+      __enable_irq();
+      NVIC_EnableIRQ(ADC14_IRQn);
+
+      //turn ADC on
+      ADC14->CTL0 |= ADC14_CTL0_ON;
+
+  }
+
+
+//*****************************************************************************
+//                         Interrupt Service Routines
+//*****************************************************************************
+
+void ADC14_IRQHandler(void)
+{
+    /* ADD CODE for the ADC14 Handler */
+    PS2_X_DIR = ADC14->MEM[0];
+    PS2_Y_DIR = ADC14->MEM[1];
+
+}
+

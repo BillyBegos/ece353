@@ -1,0 +1,116 @@
+/*
+ * timer32.c
+ *
+ *  Created on: Jun 22, 2022
+ *      Author: Billy Begos
+ */
+
+#include <student/timer32.h>
+
+/******************************************************************************
+ * Student Defined Timer32 Global Variables
+ *****************************************************************************/
+
+
+/******************************************************************************
+ * T32_1 Initialization Function
+ *
+ * Write a function that will be called to initialize the T32_1 based on the
+ * HW01 Requirements Doc.
+ *****************************************************************************/
+void ece353_T32_1_Interrupt_Ms(uint32_t time){
+          uint32_t tick = ((SystemCoreClock * time)/1000)-1;
+
+         TIMER32_1->CONTROL = 0;
+
+         TIMER32_1->LOAD = tick;
+
+         __enable_irq();
+         NVIC_EnableIRQ(T32_INT1_IRQn);
+         NVIC_SetPriority(T32_INT1_IRQn, 0);
+
+
+         TIMER32_1 -> CONTROL = TIMER32_CONTROL_ENABLE |  //turn timer on
+                 TIMER32_CONTROL_MODE |  //periodic mode
+                 TIMER32_CONTROL_SIZE |  //32 bit timer
+                 TIMER32_CONTROL_IE;  //enable interrupts
+}
+
+void ece353_MKII_S2_Init(void){
+        //configure as input
+    P3->DIR &= ~BIT5;
+}
+
+//true if button2 is pressed
+bool ece353_MKII_S2(void){
+        if((P3->IN & BIT5) ==0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
+volatile bool ALERT_S2_PRESSED = false;
+
+/******************************************************************************
+ * T32_2 Initialization Function
+ *
+ * Write a function that will be called to initialize the T32_2 based on the
+ * HW01 Requirements Doc.
+ *****************************************************************************/
+    void T32_2_Intialize(){
+        uint32_t tick = 24000000;
+
+       TIMER32_2->CONTROL = 0;
+
+       TIMER32_2->CONTROL = TIMER32_CONTROL_ONESHOT;
+       TIMER32_2->LOAD = tick;
+
+       __enable_irq();
+       NVIC_EnableIRQ(T32_INT2_IRQn);
+       NVIC_SetPriority(T32_INT2_IRQn, 0);
+
+
+       TIMER32_2 -> CONTROL |= TIMER32_CONTROL_ENABLE |
+               TIMER32_CONTROL_SIZE |  //32 bit timer
+               TIMER32_CONTROL_ONESHOT | //oneshot timer
+               TIMER32_CONTROL_IE;  //enable interrupts
+    }
+
+//*****************************************************************************
+//                         Interrupt Service Routines
+//*****************************************************************************
+
+void T32_INT1_IRQHandler(void)
+{
+    static uint8_t button_state = 0x00;
+    bool button_pressed = ece353_MKII_S2();
+
+    //debounce push button
+    button_state = button_state << 1;
+
+    if(button_pressed){
+        button_state |= 0x01;
+    }
+
+    if(button_state == 0x7F){
+        ALERT_S2_PRESSED = true;
+    }
+
+    //start conversion of adc14
+    ADC14->CTL0 |= ADC14_CTL0_SC | ADC14_CTL0_ENC;
+
+    //clear interrupt
+    TIMER32_1 -> INTCLR = BIT0;
+}
+
+volatile bool TIMER32_2_ONE_SECOND = false;
+void T32_INT2_IRQHandler(void)
+{
+    TIMER32_2_ONE_SECOND = true;
+
+    TIMER32_2 -> INTCLR = BIT0;
+
+}

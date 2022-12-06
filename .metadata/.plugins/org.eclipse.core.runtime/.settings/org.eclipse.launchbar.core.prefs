@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:HW01,org.eclipse.launchbar.core.descriptorType.default\:test,org.eclipse.launchbar.core.descriptorType.default\:HW01_F22,org.eclipse.launchbar.core.descriptorType.default\:HW02_F22,org.eclipse.launchbar.core.descriptorType.default\:13-ice-vTaskDelay,org.eclipse.launchbar.core.descriptorType.default\:13-ice-Semaphores,org.eclipse.launchbar.core.descriptorType.default\:15-ice-queues,org.eclipse.launchbar.core.descriptorType.default\:16-ice-task-notifications
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:HW01,org.eclipse.launchbar.core.descriptorType.default\:HW01_F22,org.eclipse.launchbar.core.descriptorType.default\:HW02_F22,org.eclipse.launchbar.core.descriptorType.default\:13-ice-vTaskDelay,org.eclipse.launchbar.core.descriptorType.default\:13-ice-Semaphores,org.eclipse.launchbar.core.descriptorType.default\:16-ice-task-notifications,org.eclipse.launchbar.core.descriptorType.default\:15-ice-queues
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:13-ice-Semaphores/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:13-ice-Semaphores/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

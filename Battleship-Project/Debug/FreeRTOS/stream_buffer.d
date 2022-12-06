@@ -15,7 +15,7 @@ FreeRTOS/stream_buffer.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.L
 FreeRTOS/stream_buffer.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/xlocale/_string.h
 FreeRTOS/stream_buffer.obj: C:/Users/bsqua/workspace_v12/Source/include/FreeRTOS.h
 FreeRTOS/stream_buffer.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stddef.h
-FreeRTOS/stream_buffer.obj: C:/Users/bsqua/workspace_v12/Battleship-Project/FreeRTOSConfig.h
+FreeRTOS/stream_buffer.obj: C:/Users/bsqua/workspace_v12/FreeRTOS-base/FreeRTOSConfig.h
 FreeRTOS/stream_buffer.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.h
 FreeRTOS/stream_buffer.obj: C:/Users/bsqua/workspace_v12/Source/include/projdefs.h
 FreeRTOS/stream_buffer.obj: C:/Users/bsqua/workspace_v12/Source/include/portable.h
@@ -56,7 +56,7 @@ C:/Users/bsqua/workspace_v12/Source/include/FreeRTOS.h:
 
 C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stddef.h:
 
-C:/Users/bsqua/workspace_v12/Battleship-Project/FreeRTOSConfig.h:
+C:/Users/bsqua/workspace_v12/FreeRTOS-base/FreeRTOSConfig.h:
 
 C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.h:
 

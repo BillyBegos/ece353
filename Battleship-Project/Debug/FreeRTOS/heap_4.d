@@ -14,7 +14,7 @@ FreeRTOS/heap_4.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/incl
 FreeRTOS/heap_4.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/machine/_types.h
 FreeRTOS/heap_4.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/machine/_stdint.h
 FreeRTOS/heap_4.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/sys/_stdint.h
-FreeRTOS/heap_4.obj: C:/Users/bsqua/workspace_v12/Battleship-Project/FreeRTOSConfig.h
+FreeRTOS/heap_4.obj: C:/Users/bsqua/workspace_v12/FreeRTOS-base/FreeRTOSConfig.h
 FreeRTOS/heap_4.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.h
 FreeRTOS/heap_4.obj: C:/Users/bsqua/workspace_v12/Source/include/projdefs.h
 FreeRTOS/heap_4.obj: C:/Users/bsqua/workspace_v12/Source/include/portable.h
@@ -52,7 +52,7 @@ C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/machine/_stdint.h
 
 C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/sys/_stdint.h:
 
-C:/Users/bsqua/workspace_v12/Battleship-Project/FreeRTOSConfig.h:
+C:/Users/bsqua/workspace_v12/FreeRTOS-base/FreeRTOSConfig.h:
 
 C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.h:
 

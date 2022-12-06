@@ -136,34 +136,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Battleship-Project.out \
+FreeRTOS-base2.out \
 
 EXE_OUTPUTS__QUOTED += \
-"Battleship-Project.out" \
+"FreeRTOS-base2.out" \
 
 BIN_OUTPUTS += \
-Battleship-Project.hex \
+FreeRTOS-base2.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"Battleship-Project.hex" \
+"FreeRTOS-base2.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "Battleship-Project.out"
+	@$(MAKE) --no-print-directory -Onone "FreeRTOS-base2.out"
 
 # Tool invocations
-Battleship-Project.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+FreeRTOS-base2.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Battleship-Project.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1200/ccs/ccs_base/arm/include" -i"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/lib" -i"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Battleship-Project_linkInfo.xml" --rom_model -o "Battleship-Project.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"FreeRTOS-base2.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1200/ccs/ccs_base/arm/include" -i"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/lib" -i"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="FreeRTOS-base2_linkInfo.xml" --rom_model -o "FreeRTOS-base2.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-Battleship-Project.hex: $(EXE_OUTPUTS)
+FreeRTOS-base2.hex: $(EXE_OUTPUTS)
 	@echo 'Building secondary target: "$@"'
 	@echo 'Invoking: Arm Hex Utility'
-	"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armhex" --memwidth=8 --romwidth=8 --diag_wrap=off -o "Battleship-Project.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/bin/armhex" --memwidth=8 --romwidth=8 --diag_wrap=off -o "FreeRTOS-base2.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 

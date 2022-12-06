@@ -29,19 +29,6 @@ main.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.
 main.obj: C:/Users/bsqua/workspace_v12/Source/include/projdefs.h
 main.obj: C:/Users/bsqua/workspace_v12/Source/include/portable.h
 main.obj: C:/Users/bsqua/workspace_v12/Source/include/deprecated_definitions.h
-main.obj: C:/Users/bsqua/workspace_v12/Source/portable/CCS/ARM_CM4F/portmacro.h
-main.obj: C:/Users/bsqua/workspace_v12/Source/include/mpu_wrappers.h
-main.obj: C:/Users/bsqua/workspace_v12/Source/include/task.h
-main.obj: C:/Users/bsqua/workspace_v12/Source/include/list.h
-main.obj: C:/Users/bsqua/workspace_v12/Source/include/semphr.h
-main.obj: C:/Users/bsqua/workspace_v12/Source/include/queue.h
-main.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/task_led.h
-main.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/main.h
-main.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/task_mkII_s1.h
-main.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/task_mkII_s2.h
-main.obj: ../ece353_staff.h
-main.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdbool.h
-main.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.h
 
 ../main.c:
 
@@ -100,30 +87,4 @@ C:/Users/bsqua/workspace_v12/Source/include/projdefs.h:
 C:/Users/bsqua/workspace_v12/Source/include/portable.h:
 
 C:/Users/bsqua/workspace_v12/Source/include/deprecated_definitions.h:
-
-C:/Users/bsqua/workspace_v12/Source/portable/CCS/ARM_CM4F/portmacro.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/mpu_wrappers.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/task.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/list.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/semphr.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/queue.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/task_led.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/main.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/task_mkII_s1.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/task_mkII_s2.h:
-
-../ece353_staff.h:
-
-C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdbool.h:
-
-C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.h:
 

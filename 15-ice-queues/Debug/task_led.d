@@ -29,19 +29,6 @@ task_led.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/std
 task_led.obj: C:/Users/bsqua/workspace_v12/Source/include/projdefs.h
 task_led.obj: C:/Users/bsqua/workspace_v12/Source/include/portable.h
 task_led.obj: C:/Users/bsqua/workspace_v12/Source/include/deprecated_definitions.h
-task_led.obj: C:/Users/bsqua/workspace_v12/Source/portable/CCS/ARM_CM4F/portmacro.h
-task_led.obj: C:/Users/bsqua/workspace_v12/Source/include/mpu_wrappers.h
-task_led.obj: C:/Users/bsqua/workspace_v12/Source/include/task.h
-task_led.obj: C:/Users/bsqua/workspace_v12/Source/include/list.h
-task_led.obj: C:/Users/bsqua/workspace_v12/Source/include/semphr.h
-task_led.obj: C:/Users/bsqua/workspace_v12/Source/include/queue.h
-task_led.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/task_led.h
-task_led.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/main.h
-task_led.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/task_mkII_s1.h
-task_led.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/task_mkII_s2.h
-task_led.obj: C:/Users/bsqua/workspace_v12/15-ice-queues/ece353_staff.h
-task_led.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdbool.h
-task_led.obj: C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.h
 
 ../task_led.c:
 
@@ -100,30 +87,4 @@ C:/Users/bsqua/workspace_v12/Source/include/projdefs.h:
 C:/Users/bsqua/workspace_v12/Source/include/portable.h:
 
 C:/Users/bsqua/workspace_v12/Source/include/deprecated_definitions.h:
-
-C:/Users/bsqua/workspace_v12/Source/portable/CCS/ARM_CM4F/portmacro.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/mpu_wrappers.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/task.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/list.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/semphr.h:
-
-C:/Users/bsqua/workspace_v12/Source/include/queue.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/task_led.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/main.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/task_mkII_s1.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/task_mkII_s2.h:
-
-C:/Users/bsqua/workspace_v12/15-ice-queues/ece353_staff.h:
-
-C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdbool.h:
-
-C:/ti/ccs1200/ccs/tools/compiler/ti-cgt-arm_20.2.6.LTS/include/stdlib.h:
 
